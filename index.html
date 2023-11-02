@@ -9,10 +9,11 @@
     <button id="3",hidden, onclick="Function2()">clickmetoo</button>
     <p>hi</p>
     <script>
+    document.getElementById("3").style.visibility = "hidden";
     function Function() {
     console.log("it works");
     document.getElementById("1").innerHTML = "its so over";
-    document.getElementbyId("3").hidden = false;
+    document.getElementbyId("3").style.visibility = "visible";
     };
     function Function2() {
     console.log("button2 works");
