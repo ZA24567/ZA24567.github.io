@@ -2,17 +2,22 @@
 <html lang"en-US">
 <body>
   <div>
-    <title>document</title>
     <p>sup bro</p>
     <p id="1">test test test test test test</p>
     <button onclick="Function()">click me</button>
+    <p1 id="2">whats good</p1>
+    <button id="3",hidden, onclick="Function2()">clickmetoo</button>
     <p>hi</p>
     <script>
     function Function() {
     console.log("it works");
     document.getElementById("1").innerHTML = "its so over";
+    document.getElementbyId("3").hidden = false;
     };
-    console.log("wow");
+    function Function2() {
+    console.log("button2 works");
+    };
+    console.log("starter log");
     </script>
   </div>
 </body>
