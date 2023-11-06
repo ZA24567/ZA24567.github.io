@@ -1,42 +1,52 @@
 <!DOCTYPE html>
-<html lang"en-US">
+<html lang"en-us">
 <body>
-  <div>
-    <p id="1">test test test test test test</p>
-    <h1>hello</h1>
-    <button onclick="Function()">click me</button>
-    <br>
-    <p1 id="2">whats good</p1>
-    <br>
-    <button id="3", onclick="Function2()">clickmetoo</button>
-    <p>hi</p>
-    <p id="firstrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    </p>
-    <p>____|____|____</p>
-    <p id="secondrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    </p>
-    <p>____|____|____</p>
-    <p id="thirdrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    </p>
+<div>
+<h1>tic-tac-toe</h1>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="function4()">x</button><button onclick="function5()">y</button><button onclick="function6()">z</button>
+<br>
+<button onclick="function1()">x</button>
+<nbr id="1">t</nbr>&nbsp;&nbsp;|&nbsp;<nbr id="2">t</nbr>&nbsp;&nbsp;|&nbsp;<nbr id="3">t</nbr>
+<br>
+<button onclick="function2()">y</button>
+<nbr id="4">t</nbr>&nbsp;&nbsp;|&nbsp;<nbr id="5">t</nbr>&nbsp;&nbsp;|&nbsp;<nbr id="6">t</nbr>
+<br>
+<button onclick="function3()">z</button>
+<nbr id="7">t</nbr>&nbsp;&nbsp;|&nbsp;<nbr id="8">t</nbr>&nbsp;&nbsp;|&nbsp;<nbr id="9">t</nbr>
+<script>
+var turn = 0;
+var x;
+var y;
+function setText(id) {
+    if((turn % 2) == true) {
 
-    
-    <script>
-    var turn="x";
-    document.getElementById("3").style.visibility = "hidden";
-    function Function() {
-    console.log("it works");
-    document.getElementById("1").innerHTML = "its so over";
-    document.getElementById("3").style.visibility = "visible";
-    };
-    function Function2() {
-    console.log("button2 works");
-    };
-    function SetmidValue(x,id,y){
-    //Y is the row
-    //X is the column
-    if(y==1) {
-    if(x==1) { document.getElementById(id).innerHTML = &nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  }
-    if(x==2) { document.getElementById(id).innerHTML = "Test" };
-    }
-    console.log("starter log");
-    </script>
-  </div>
+    }  
+}
+function function1() {
+    x = 1
+    setText()
+}
+function function2() {
+    x = 2
+    setText()
+}
+function function3() {
+    x = 3
+    setText()
+}
+function function4() {
+    y = 1
+    setText()
+}
+function function5() {
+    y = 2
+    setText()
+}
+function function6() {
+    y = 3
+    setText()
+}
+</script>
+</div>
 </body>
-</html>
