@@ -5,12 +5,13 @@
 <p>testparagraph</p>
 <form><label for="username">Username:</label>
 <input type="text" id="username">   </form>
-<button onclick="getFormInput()">submit form</button>
+<button onclick="getFormInput(username,jeff)">submit form</button>
 <script>
-function getFormInput() {
-var username = document.getElementById("username").value;
-console.log("input is "+username);
+function getFormInput(x,y) {
+var y = document.getElementById("x").value;
+console.log("input is "+y);
 };
+
 </script>
 </div>
 </body>
