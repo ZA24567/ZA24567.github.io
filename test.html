@@ -6,11 +6,16 @@
   <form>
     <label for="username">Username:</label>
     <input type="text" id="username">
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" onclick="getFormInput">
   </form>
 
 <script>
-//test      
+//test
+function getFormInput() {
+var username = document.getElementById("username").value;
+console.log("input is "+username);
+}
+
 </script>
 </div>
 </body>
