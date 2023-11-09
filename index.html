@@ -5,11 +5,11 @@
 <p>testparagraph</p>
 <form><label for="username">Username:</label>
 <input type="text" id="username">   </form>
-<button onclick="getFormInput(username)">submit form</button>
+<button onclick="getFormInput()">submit form</button>
 <script>
-function getFormInput(x) {
-var y = document.getElementById("x").value;
-console.log("input is "+y);
+function getFormInput() {
+var x = document.getElementById("username").value;
+console.log("input is "+x);
 };
 
 </script>
