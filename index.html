@@ -5,12 +5,22 @@
 <p>testparagraph</p>
 <form><label for="username">Username:</label>
 <input type="text" id="username">   </form>
-<button onclick="getFormInput()">submit form</button>
+<button onclick="getFormInput()" onclick="regextest()">submit form</button>
 <script>
+var pattern1 = new RegExp('[A-z]');
 function getFormInput() {
 var x = document.getElementById("username").value;
 console.log("input is "+x);
 };
+function regextest() {
+console.log(x);
+console.log(pattern1);
+if(pattern1.test(x) == false) {
+console.log("input is a number");
+} else {
+  console.log("input is not a number");
+};
+
 
 </script>
 </div>
