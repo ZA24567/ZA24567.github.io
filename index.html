@@ -6,14 +6,14 @@
   <form>
     <label for="username">Username:</label>
     <input type="text" id="username">
-    <input type="submit" value="Submit" onclick="getFormInput" autocomplete="off">
   </form>
+<button onclick="getFormInput">submit form</button>
 
 <script>
 //test
 function getFormInput() {
 var username = document.getElementById("username").value;
-console.log("input is ");
+console.log("input is "+username);
 };
 
 </script>
