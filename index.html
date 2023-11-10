@@ -9,21 +9,28 @@
 <p id="1">output</p>
 <script>
 var x;
-var pattern1 = new RegExp('[A-z]');
+var pattern1 = new RegExp('[0-9]');
 var specialcharpatt = new RegExp('[!-/]');
+var letterpatt = new RegExp('[A-z]');
 function getFormInput() {
 x = document.getElementById("username").value;
 console.log("input is "+x);
 regextest();
 };
 function regextest() {
-if(pattern1.test(x) == false) {
+if(pattern1.test(x) == true) {
 console.log("input is a number");
 document.getElementById("1").innerHTML = "input is a number";
-} else if(specialcharpatt.test(x) == true {
-console.log("input is not a number");
-document.getElementById("1").innerHTML = "input is a special character;
-}};
+}
+if(specialcharpatt.test(x) == true) {
+console.log("input is a special character");
+document.getElementById("1").innerHTML = "input is a special character";
+}
+if(letterpatt.test(x) == true) {
+console.log("input is a letter");
+document.getElementById("1").innerHTML = "input is a letter";
+}
+};
 
 
 </script>
