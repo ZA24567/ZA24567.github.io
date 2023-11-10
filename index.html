@@ -8,9 +8,10 @@
 <button onclick="getFormInput()">submit form</button>
 <p id="1">output</p>
 <script>
+var x;
 var pattern1 = new RegExp('[A-z]');
 function getFormInput() {
-var x = document.getElementById("username").value;
+x = document.getElementById("username").value;
 console.log("input is "+x);
 regextest();
 };
