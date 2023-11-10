@@ -6,6 +6,7 @@
 <form><label for="username">Username:</label>
 <input type="text" id="username">   </form>
 <button onclick="getFormInput()" onclick="regextest()">submit form</button>
+<p id="1">output</p>
 <script>
 var pattern1 = new RegExp('[A-z]');
 function getFormInput() {
@@ -17,8 +18,10 @@ console.log(x);
 console.log(pattern1);
 if(pattern1.test(x) == false) {
 console.log("input is a number");
+document.getElementById("1").innerHTML = input is a number;
 } else {
-  console.log("input is not a number");
+console.log("input is not a number");
+document.getElementById("1").innerHTML = input is not a number;
 };
 
 
