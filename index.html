@@ -12,6 +12,7 @@ var x;
 var pattern1 = new RegExp('[0-9]');
 var specialcharpatt = new RegExp('[!-/]');
 var letterpatt = new RegExp('[A-z]');
+var specialcharpatt2 = new RegExp('[:-@]');
 function getFormInput() {
 x = document.getElementById("username").value;
 console.log("input is "+x);
@@ -22,7 +23,7 @@ if(pattern1.test(x) == true) {
 console.log("input is a number");
 document.getElementById("1").innerHTML = "input is a number";
 }
-if(specialcharpatt.test(x) == true) {
+if(specialcharpatt.test(x) == true||specialcharpatt2.test(x) == true) {
 console.log("input is a special character");
 document.getElementById("1").innerHTML = "input is a special character";
 }
