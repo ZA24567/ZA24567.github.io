@@ -4,9 +4,10 @@
 <div>
 <p>testparagraph</p>
 <form><label for="username">input:</label>
-<input type="text" id="username">   </form>
+<input type="text" id="username">   <input type="text" id="old"></form>
 <button onclick="getFormInput()">submit form</button>
 <p id="1">output</p>
+<p id="2">&nbsp;</p>
 <script>
 var x;
 var pattern1 = new RegExp('[0-9]');
@@ -15,8 +16,11 @@ var letterpatt = new RegExp('[A-z]');
 var specialcharpatt2 = new RegExp('[:-@]');
 function getFormInput() {
 x = document.getElementById("username").value;
+y = document.getElementById("old").value;
 console.log("input is "+x);
+console.log("y is "+y);
 regextest();
+document.GetElementById("2").innerHTML = findscalefactor()
 };
 function regextest() {
 if(pattern1.test(x) == true) {
@@ -30,6 +34,9 @@ document.getElementById("1").innerHTML = "input is a special character";
 if(letterpatt.test(x) == true) {
 console.log("input is a letter");
 document.getElementById("1").innerHTML = "input is a letter";
+}
+function findscalefactor() {
+return x/y;
 }
 };
 
