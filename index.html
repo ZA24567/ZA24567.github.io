@@ -4,7 +4,7 @@
 <div>
 <p>testparagraph</p>
 <form><label for="username">input:</label>
-<input type="text" id="username">   <input type="text" id="old"></form>
+<input type="text" id="username">a   <input type="text" id="old"></form>
 <button onclick="getFormInput()">submit form</button>
 <p id="1">output</p>
 <p id="2">&nbsp;</p>
@@ -20,7 +20,8 @@ y = document.getElementById("old").value;
 console.log("input is "+x);
 console.log("y is "+y);
 regextest();
-document.GetElementById("2").innerHTML = findscalefactor()
+z = x/y;
+document.GetElementById("2").innerHTML = z;
 };
 function regextest() {
 if(pattern1.test(x) == true) {
@@ -39,8 +40,6 @@ function findscalefactor() {
 return x/y;
 }
 };
-
-
 </script>
 </div>
 </body>
