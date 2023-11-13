@@ -8,6 +8,7 @@
 <button onclick="getFormInput()">submit form</button>
 <p id="1">output</p>
 <p id="2">&nbsp;</p>
+<p id="3">&nbsp;</p>
 <script>
 var x;
 var pattern1 = new RegExp('[0-9]');
@@ -35,9 +36,6 @@ document.getElementById("1").innerHTML = "input is a special character";
 if(letterpatt.test(x) == true) {
 console.log("input is a letter");
 document.getElementById("1").innerHTML = "input is a letter";
-}
-function findscalefactor() {
-return x/y;
 }
 };
 </script>
