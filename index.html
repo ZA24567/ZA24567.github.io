@@ -4,9 +4,9 @@
 <div>
 <p>testparagraph</p>
 <form><label for="username">input:</label>
-<input type="text" id="username"><p>number 2:</p><input type="text" id="old"></form>
-<p>other number:</p><input type"text" id="otherside">
-<button onclick="getFormInput()">submit form</button>
+<input type="text" id="username"><p>number 2:</p><input type="text" id="old">
+<p>other number:</p><input type="text" id="otherside">
+<button onclick="getFormInput()">submit form</button></form>
 <p id="1">output</p>
 <p id="2">&nbsp;</p>
 <p id="3">&nbsp;</p>
@@ -19,11 +19,14 @@ var specialcharpatt2 = new RegExp('[:-@]');
 function getFormInput() {
 x = document.getElementById("username").value;
 y = document.getElementById("old").value;
+d = document.getElementById("otherside").value;
 console.log("input is "+x);
 console.log("y is "+y);
 regextest();
 z = x/y;
+d = d/z;
 document.getElementById("2").innerHTML = "scale factor is "+z;
+document.getElementById("3").innerHTML = "new side is "+d;
 };
 function regextest() {
 if(pattern1.test(x) == true) {
