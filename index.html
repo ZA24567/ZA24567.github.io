@@ -4,7 +4,8 @@
 <div>
 <p>testparagraph</p>
 <form><label for="username">input:</label>
-<input type="text" id="username">a   <input type="text" id="old"></form>
+<input type="text" id="username"><p>number 2:</p><input type="text" id="old"></form>
+<p>other number:</p><input type"text" id="otherside">
 <button onclick="getFormInput()">submit form</button>
 <p id="1">output</p>
 <p id="2">&nbsp;</p>
@@ -22,7 +23,7 @@ console.log("input is "+x);
 console.log("y is "+y);
 regextest();
 z = x/y;
-document.getElementById("2").innerHTML = z;
+document.getElementById("2").innerHTML = "scale factor is "+z;
 };
 function regextest() {
 if(pattern1.test(x) == true) {
@@ -37,7 +38,7 @@ if(letterpatt.test(x) == true) {
 console.log("input is a letter");
 document.getElementById("1").innerHTML = "input is a letter";
 }
-};
+}
 </script>
 </div>
 </body>
