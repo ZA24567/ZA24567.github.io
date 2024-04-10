@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>calculator of things</title>
+<body>
+<div>
+<button id="firstButton" onclick="test()">button</button><button id="otherButton" onclick="test2()">thing2</button>
+<p>mole to atom:</p><input type="text" id="input1">
+<p>atom to mole:</p><input type="text" id="input2">
+<button onclick="getInputs()">get inputs</button>
+</div>
+<script>
+const testobj = {
+    moles: 0,
+    atoms: 0,
+    clear(){
+        this.moles = 0;
+        this.atoms = 0;
+    }
+}
+
+function getInputs(){
+    testobj.clear();
+    const input1 = document.getElementById("input1");
+    const input2 = document.getElementById("input2");
+    var x = input1.value;
+    var y = input2.value;
+    testobj.atoms = x*6.02e23 //mole to atom
+    testobj.moles = y/6.02e23 //atom to mole
+    testobj.atoms = Math.round(testobj.atoms*10)/10;
+    testobj.moles = Math.round(testobj.moles*10)/10;
+    document.getElementById("input2").value = testobj.moles;
+    document.getElementById("input1").value = testobj.atoms;
+}
+function test(){
+    console.log("test1");
+}
+function test2(){
+    console.log("test2");
+}
+</script>
+</body>
+</head>
+</html>

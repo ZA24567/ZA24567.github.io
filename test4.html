@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang"en-us">
+<body>
+<div>
+<a href="https://www.ZA24567.github.io/test/">testparagraph</a>
+<label for="username">input:</label>
+<input type="text" id="username"><p>number 2:</p><input type="text" id="old">
+<p>other number:</p><input type="text" id="otherside">
+<button onclick="getFormInput()">submit form</button>
+<p id="1">output</p>
+<p id="2">&nbsp;</p>
+<p id="3">&nbsp;</p>
+<script>
+var x;
+var pattern1 = new RegExp('[0-9]');
+var specialcharpatt = new RegExp('[!-/]');
+var letterpatt = new RegExp('[A-z]');
+var specialcharpatt2 = new RegExp('[:-@]');
+function getFormInput() {
+x = document.getElementById("username").value;
+y = document.getElementById("old").value;
+d = document.getElementById("otherside").value;
+console.log("input is "+x);
+console.log("y is "+y);
+regextest();
+z = x/y;
+d = d/z;
+document.getElementById("2").innerHTML = "scale factor is "+z;
+document.getElementById("3").innerHTML = "new side is "+d;
+};
+function regextest() {
+if(pattern1.test(x) == true) {
+console.log("input is a number");
+document.getElementById("1").innerHTML = "input is a number";
+}
+if(specialcharpatt.test(x) == true||specialcharpatt2.test(x) == true) {
+console.log("input is a special character");
+document.getElementById("1").innerHTML = "input is a special character";
+}
+if(letterpatt.test(x) == true) {
+console.log("input is a letter");
+document.getElementById("1").innerHTML = "input is a letter";
+}
+}
+</script>
+</div>
+</body>

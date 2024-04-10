@@ -1,13 +1,61 @@
 <!DOCTYPE html>
-<htm lang="en-us">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Move Circle with WASD</title>
+<style>
+    #circle {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+    }
+</style>
+</head>
 <body>
-<div>
-<canvas id="myCanvas" width="500" height="400" style="border:1px solid #000000;">no canvas for you</canvas>
+
+<div id="circle"></div>
+
 <script>
-const canvas = document.getElementById("myCanvas");
-const ctx = canvas.getContext("2d");
-//test
-console.log("test");
+    document.addEventListener('DOMContentLoaded', () => {
+        const circle = document.getElementById('circle');
+        let x = 0;
+        let y = 0;
+        let momentum = 0;
+        const moveCircle = (dx, dy) => {
+            x += dx;
+            y += dy;
+            circle.style.left = x + 'px';
+            circle.style.top = y + 'px';
+        };
+        document.addEventListener('keydown', (event) => {
+            const key = event.key.toLowerCase();
+            switch (key) {
+                case 'w':
+                    moveCircle(0, -10);
+                    break;
+                case 'a':
+                    moveCircle(-10, 0);
+                    break;
+                case 's':
+                    moveCircle(0, 10);
+                    break;
+                case 'd':
+                    moveCircle(10, 0);
+                    break;
+                case 'space':
+                    moveCircle(0,-20);
+            }
+        });
+        while(true){
+            moveCircle(0,momentum);
+            momentum--;
+            
+        }
+    });
 </script>
-</div>
+
 </body>
+</html>
