@@ -3,8 +3,51 @@
 <head>
 <title>test</title>
 </head>
+<style>
+    /* Style for sidebar */
+    .sidebar {
+        height: 100%;
+        width: 100px; /* Adjust as needed */
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 20px;
+    }
+
+    /* Style for links in the sidebar */
+    .sidebar a {
+        padding: 10px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        display: block;
+        border-width:2px;
+        border-color: black;
+        border-right-style:solid;
+        height:100%
+    }
+    .d1 {
+        height: 100%;
+        border-left:6px black; 
+    }
+    /* Style for active link */
+    .sidebar a.active {
+        background-color: #fdfdfd;
+    }
+
+    /* Style for main content */
+    .content {
+        margin-left: 100px; /* Adjust according to sidebar width */
+        padding: 20px;
+    }
+</style>
 <body>
-<div>
+<div class="sidebar">
+<a href="index.html">Home</a>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+</div>    
+<div class="content">
 <h1>the other page</h1>
 <a href="index.html">back to main</a>
 </div>
